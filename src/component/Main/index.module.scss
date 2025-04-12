@@ -1,4 +1,4 @@
-@import '@/style/variable';
+@use "@/style/variable" as *;
 
 .component-container {
   background-color: $dark-purple-color;
@@ -11,14 +11,14 @@
   .content {
     position: relative;
     width: 100%;
-    height: 700px;
-    padding: 100px 15px;
+    padding: 100px 15px 50px;
     color: $white-font-color;
 
     @include tablet {
       display: flex;
       justify-content: space-between;
       max-width: 1200px;
+      height: 700px;
       margin: 0 auto;
       padding: 0 20px 15px;
     }
