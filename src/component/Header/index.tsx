@@ -4,8 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 import { useGetViewport } from "@/hook/useGetViewport";
 
-import styles from "./index.module.scss";
-import { createPortal } from "react-dom";
+import styles from "./index.module.scss"; 
 
 const Header = (): JSX.Element => {
   const viewport = useGetViewport();
@@ -15,7 +14,7 @@ const Header = (): JSX.Element => {
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const handleClickOutside = (e: MouseEvent<any>) => {
+    const handleClickOutside = (e: globalThis.MouseEvent) => {
       const targetNode = e.target as Node;
 
       if (!mobileMenuRef.current?.contains(targetNode)) {
@@ -38,7 +37,7 @@ const Header = (): JSX.Element => {
 
   return(
     <div className={styles['component-container']}>
-      <div className={styles['content']}>
+      <div className={styles['main']}>
         <div className={styles['title-wrapper']}>
           <Link to='/'>Hyunsoo Kim</Link>
         </div>
@@ -51,22 +50,6 @@ const Header = (): JSX.Element => {
             <RxHamburgerMenu
               size={30}
             />
-            {createPortal(
-              <div 
-                className={`${styles["mobile-menu-box"]} ${
-                  mobileMenuOpen
-                    ? styles["mobile-menu-box--open"]
-                    : styles["mobile-menu-box--close"]
-                }`}
-              >
-                <Link to='/aboutMe'>About Me</Link>
-                <Link to='/portfolio'>Portfolio</Link>
-                <Link to='/skills'>Skills</Link>
-                <Link to='/github'>Github</Link>
-                <Link to='contact'>Contact</Link>
-              </div>,
-              document.body
-            )}
           </div>
         )}
         {viewport !== "mobile" && (
@@ -79,6 +62,21 @@ const Header = (): JSX.Element => {
           </div>
         )}
       </div>
+      {viewport === "mobile" && (
+        <div 
+          className={`${styles["mobile-menu-box"]} ${
+            mobileMenuOpen
+              ? styles["mobile-menu-box--open"]
+              : styles["mobile-menu-box--close"]
+          }`}
+        >
+          <Link to='/aboutMe'>About Me</Link>
+          <Link to='/portfolio'>Portfolio</Link>
+          <Link to='/skills'>Skills</Link>
+          <Link to='/github'>Github</Link>
+          <Link to='contact'>Contact</Link>
+        </div>
+      )}
     </div>
   );
 };
