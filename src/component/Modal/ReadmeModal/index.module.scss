@@ -1,0 +1,136 @@
+@use "@/style/variable" as *;
+
+.component-container {
+  position: fixed;
+  z-index: 999;
+  overflow: hidden;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .content {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto 30px;
+    border-radius: 8px;
+    background-color: $white-font-color;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .header {
+      display: flex;
+      margin: 0;
+      padding: 15px 10px;
+      background-color: #222222;
+      color: $white-font-color;
+
+      svg {
+        margin-left: auto;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .main {
+      padding: 20px 25px;
+      color: #212529;
+
+      h1 {
+        margin: 0 0 15px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid rgb(204, 204, 204);
+        letter-spacing: 0.5px;
+        font-size: 24px;
+      }
+
+      p {
+        margin-top: 0;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      span {
+        display: inline-block;
+        padding-bottom: 20px;
+        letter-spacing: 0.5px;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .article-box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h2 {
+          font-size: 20px;
+        }
+
+          .article__link {
+            margin-bottom: 10px;
+
+            .link-box {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+
+              a {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+      
+                svg {
+                  position: relative;
+                  top: 2px;
+                  margin-right: 8px;
+                }
+            }
+          }
+        }
+
+        .article__summary {
+
+          ul {
+            padding-left: 20px;
+
+            li {
+              padding: 5px 0;
+              font-size: 15px;
+            }
+          }
+        }
+
+        .article__background {
+          p {
+            margin-top: 0;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+
+        .article__detail {
+          p {
+            margin-top: 0;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+
+        .article__technology-stack {
+          img {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

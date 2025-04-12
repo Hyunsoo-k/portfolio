@@ -1,0 +1,80 @@
+@use "@/style/variable" as *;
+
+.over-lay {
+  position: fixed;
+  z-index: 999;
+  overflow: hidden;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .component-container {
+    width: 95%;
+    aspect-ratio: 1 / 1.1;
+    margin: 30px auto 30px;
+    background-color: $white-font-color;
+    border-radius: 8px;
+
+    @include tablet {
+      width: 500px;
+      aspect-ratio: 1 / 1.1;
+    }
+
+    .carousel {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+
+      @include tablet {
+        padding: 15px 15px 20px;
+      }
+
+      .carousel__item-box {
+        overflow: hidden;
+        display: flex;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+
+        .carousel__item {
+          flex-shrink: 0;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top;
+          border-radius: 8px;
+        }
+      }
+
+      .carousel__page {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+        svg {
+          position: relative;
+          top: 3px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        div {
+          font-weight: 500;
+          color: #000000;
+        }
+      }
+    }
+  }
+}

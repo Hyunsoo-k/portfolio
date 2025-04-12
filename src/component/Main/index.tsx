@@ -2,8 +2,6 @@ import { JSX } from 'react'
 import { FaGithub } from "react-icons/fa6";
 import { FaBold } from "react-icons/fa6";
 
-import portfolioImage from '@/assets/mainImage.png';
-
 import styles from './index.module.scss'
 
 const Main = (): JSX.Element => {
@@ -26,7 +24,7 @@ const Main = (): JSX.Element => {
           </div>
         </div>
         <div className={styles['image-area']}>
-          <img src={portfolioImage} />
+          <img src="/projectImage/mainImage.png" />
         </div>
         <div className={styles['follow-me-area']}>
           <span>FOLLOW ME ON :</span>
