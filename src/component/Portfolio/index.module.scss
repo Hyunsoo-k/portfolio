@@ -5,13 +5,13 @@
 
   .main {
     width: 100%;
-    padding: 100px 15px;
+    padding: 60px 15px;
     color: $white-font-color;
 
     @include tablet {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 20px 15px;
+      padding: 70px 20px; // padding: 0 20px 15px;
     }
 
     @include desktop {
