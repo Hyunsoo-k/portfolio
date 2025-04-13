@@ -29,9 +29,14 @@
 
         h1 {
           margin: 0;
-          font-size: 35px;
+          letter-spacing: 2px;
+          font-size: 45px;
           font-weight: 400;
           font-family: "Slabo 27px", serif;
+
+          @include tablet {
+            font-size: 50px;
+          }
         }
 
         small {
