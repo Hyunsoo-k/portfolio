@@ -20,7 +20,7 @@ const Contact = (): JSX.Element => {
   };
 
   return(
-    <div className={styles["component-container"]}>
+    <div id="Contact" className={styles["component-container"]}>
       <div className={styles["main"]}>
         <div className={styles["contact"]}>
           <div className={styles["header"]}>

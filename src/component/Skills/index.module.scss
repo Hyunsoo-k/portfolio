@@ -1,6 +1,7 @@
 @use "@/style/variable" as *;
 
 .component-container {
+  position: relative;
   background-color: $bright-purple-color;
 
   .main {
@@ -87,6 +88,18 @@
           }
         }
       }
+    }
+  }
+
+  .polkaDots {
+    display: none;
+
+    @include desktop {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: -90px;
+      width: 90px;
     }
   }
 }

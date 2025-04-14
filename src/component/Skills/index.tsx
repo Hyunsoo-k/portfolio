@@ -5,7 +5,7 @@ import { technologyStackBadgeMap } from "@/projectData/technologyStackBadge";
 
 const Skills = (): JSX.Element => {
   return (
-    <div className={styles["component-container"]}>
+    <div id="Skills" className={styles["component-container"]}>
       <div className={styles["main"]}>
         <div className={styles["header"]}>
           <div className={styles["title"]}>
@@ -56,6 +56,7 @@ const Skills = (): JSX.Element => {
           </div>
         </div>
       </div>
+      <img className={styles["polkaDots"]} src={"/polkaDots.svg"} />
     </div>
   );
 };
