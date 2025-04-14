@@ -1,0 +1,89 @@
+
+<svg width="180" height="360" viewBox="0 0 180 360" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .white { fill: #FFFFFF; }
+    .red { fill: #D6223B; }
+  </style>
+  <g>
+    <g class="white">
+      <circle cx="15" cy="15" r="6" />
+      <circle cx="45" cy="15" r="6" />
+      <circle cx="75" cy="15" r="6" />
+      <circle cx="15" cy="45" r="6" />
+      <circle cx="45" cy="45" r="6" />
+      <circle cx="75" cy="45" r="6" />
+      <circle cx="15" cy="75" r="6" />
+      <circle cx="45" cy="75" r="6" />
+      <circle cx="75" cy="75" r="6" />
+      <circle cx="15" cy="105" r="6" />
+      <circle cx="45" cy="105" r="6" />
+      <circle cx="75" cy="105" r="6" />
+      <circle cx="15" cy="135" r="6" />
+      <circle cx="45" cy="135" r="6" />
+      <circle cx="75" cy="135" r="6" />
+      <circle cx="15" cy="165" r="6" />
+      <circle cx="45" cy="165" r="6" />
+      <circle cx="75" cy="165" r="6" />
+    </g>
+    <g class="red">
+      <circle cx="105" cy="15" r="6" />
+      <circle cx="135" cy="15" r="6" />
+      <circle cx="165" cy="15" r="6" />
+      <circle cx="105" cy="45" r="6" />
+      <circle cx="135" cy="45" r="6" />
+      <circle cx="165" cy="45" r="6" />
+      <circle cx="105" cy="75" r="6" />
+      <circle cx="135" cy="75" r="6" />
+      <circle cx="165" cy="75" r="6" />
+      <circle cx="105" cy="105" r="6" />
+      <circle cx="135" cy="105" r="6" />
+      <circle cx="165" cy="105" r="6" />
+      <circle cx="105" cy="135" r="6" />
+      <circle cx="135" cy="135" r="6" />
+      <circle cx="165" cy="135" r="6" />
+      <circle cx="105" cy="165" r="6" />
+      <circle cx="135" cy="165" r="6" />
+      <circle cx="165" cy="165" r="6" />
+    </g>
+    <g class="red">
+      <circle cx="15" cy="195" r="6" />
+      <circle cx="45" cy="195" r="6" />
+      <circle cx="75" cy="195" r="6" />
+      <circle cx="15" cy="225" r="6" />
+      <circle cx="45" cy="225" r="6" />
+      <circle cx="75" cy="225" r="6" />
+      <circle cx="15" cy="255" r="6" />
+      <circle cx="45" cy="255" r="6" />
+      <circle cx="75" cy="255" r="6" />
+      <circle cx="15" cy="285" r="6" />
+      <circle cx="45" cy="285" r="6" />
+      <circle cx="75" cy="285" r="6" />
+      <circle cx="15" cy="315" r="6" />
+      <circle cx="45" cy="315" r="6" />
+      <circle cx="75" cy="315" r="6" />
+      <circle cx="15" cy="345" r="6" />
+      <circle cx="45" cy="345" r="6" />
+      <circle cx="75" cy="345" r="6" />
+    </g>
+    <g class="white">
+      <circle cx="105" cy="195" r="6" />
+      <circle cx="135" cy="195" r="6" />
+      <circle cx="165" cy="195" r="6" />
+      <circle cx="105" cy="225" r="6" />
+      <circle cx="135" cy="225" r="6" />
+      <circle cx="165" cy="225" r="6" />
+      <circle cx="105" cy="255" r="6" />
+      <circle cx="135" cy="255" r="6" />
+      <circle cx="165" cy="255" r="6" />
+      <circle cx="105" cy="285" r="6" />
+      <circle cx="135" cy="285" r="6" />
+      <circle cx="165" cy="285" r="6" />
+      <circle cx="105" cy="315" r="6" />
+      <circle cx="135" cy="315" r="6" />
+      <circle cx="165" cy="315" r="6" />
+      <circle cx="105" cy="345" r="6" />
+      <circle cx="135" cy="345" r="6" />
+      <circle cx="165" cy="345" r="6" />
+    </g>
+  </g>
+</svg>

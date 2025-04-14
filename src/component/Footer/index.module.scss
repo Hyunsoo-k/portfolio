@@ -1,0 +1,89 @@
+@use "@/style/variable" as *;
+
+.component-container {
+  position: relative;
+  background-color: $bright-purple-color;
+
+  .main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 30px 15px;
+    color: $white-font-color;
+
+    @include tablet {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    @include desktop {
+      width: 85%;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 50%;
+      aspect-ratio: 1 / 1;
+      border: 2px dotted #938f9e;
+      border-radius: 50%;
+
+      @include tablet {
+        max-width: 350px;
+      }
+
+      h1 {
+        margin: 25% auto 10px;
+        text-align: center;
+        letter-spacing: 2px;
+        font-size: clamp(1rem, 5vw, 3rem);
+        font-family: "Slabo 27px", serif;
+
+        @include tablet {
+          margin: 90px auto 20px;
+        }
+      }
+
+      p {
+        text-align: center;
+        font-size: clamp(0.7rem, 2vw, 3rem);
+
+        @include tablet {
+          display: block;
+          text-align: center;
+          font-size: 1rem;
+        }
+      }
+
+      .icon-box {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 15px;
+
+        svg:hover {
+          cursor: pointer;
+        }
+
+        @include tablet {
+          gap: 30px;
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+  
+  .polkaDots {
+    display: none;
+
+    @include desktop {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -90px;
+      width: 90px;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import { JSX, MouseEvent, useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 import { useGetViewport } from "@/hook/useGetViewport";
@@ -8,6 +8,9 @@ import styles from "./index.module.scss";
 
 const Header = (): JSX.Element => {
   const viewport = useGetViewport();
+
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
@@ -28,6 +31,45 @@ const Header = (): JSX.Element => {
       window.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    
+    if (hash) {
+      const destinationComponent = document.querySelector(hash);
+
+
+      destinationComponent?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
+
+  const handleClickRoute = (e: MouseEvent<HTMLElement>): void => {
+    e.stopPropagation();
+
+    setMobileMenuOpen(false);
+
+    const target = e.target as HTMLElement;
+
+    const destinationRoute = target.innerHTML.replace(/\s/g, "");
+
+    switch (destinationRoute) {
+      case "AbouteMe":
+        navigate("/#AboutMe");
+        break;
+      case "Portfolio":
+        navigate("/#Portfolio");
+        break;
+      case "Skills":
+        navigate("/#Skills");
+        break;
+      case "Github":
+        window.open("https://github.com/Hyunsoo-k", "_blank");
+        break;
+      case "Contact":
+        navigate("/#Contact");
+        break;
+    }
+  };
 
   const handleClickHamburger = (e: MouseEvent<HTMLElement>): void => {
     e.stopPropagation();
@@ -54,11 +96,11 @@ const Header = (): JSX.Element => {
         )}
         {viewport !== "mobile" && (
           <div className={styles['menu-box']}>
-            <Link to='/aboutMe'>About Me</Link>
-            <Link to='/portfolio'>Portfolio</Link>
-            <Link to='/skills'>Skills</Link>
-            <Link to='/github'>Github</Link>
-            <Link to='contact'>Contact</Link>
+            <a onClick={handleClickRoute}>About Me</a>
+            <a onClick={handleClickRoute}>Portfolio</a>
+            <a onClick={handleClickRoute}>Skills</a>
+            <a onClick={handleClickRoute}>Github</a>
+            <a onClick={handleClickRoute}>Contact</a>
           </div>
         )}
       </div>
@@ -70,11 +112,11 @@ const Header = (): JSX.Element => {
               : styles["mobile-menu-box--close"]
           }`}
         >
-          <Link to='/aboutMe'>About Me</Link>
-          <Link to='/portfolio'>Portfolio</Link>
-          <Link to='/skills'>Skills</Link>
-          <Link to='/github'>Github</Link>
-          <Link to='contact'>Contact</Link>
+          <a onClick={handleClickRoute}>About Me</a>
+          <a onClick={handleClickRoute}>Portfolio</a>
+          <a onClick={handleClickRoute}>Skills</a>
+          <a onClick={handleClickRoute}>Github</a>
+          <a onClick={handleClickRoute}>Contact</a>
         </div>
       )}
     </div>

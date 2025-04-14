@@ -25,7 +25,7 @@ const Portfolio = (): JSX.Element => {
   };
 
   return(
-    <div className={styles["compoenent-container"]}>
+    <div id="Portfolio" className={styles["compoenent-container"]}>
       <div className={styles["main"]}>
         <div className={styles["header"]}>
           <div className={styles["title"]}>

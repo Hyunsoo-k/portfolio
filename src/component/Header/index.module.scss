@@ -104,14 +104,16 @@
     z-index: 998;
     display: flex;
     flex-direction: column;
-    gap: 25px;
     width: 100%;
+    height: 240px;
     padding: 15px;
     background-color: #FFF;
     transform: translateY(-140px);
     transition: transform 0.5s ease;
   
     a {
+      flex-grow: 1;
+      height: 100%;
       text-decoration: none;
       text-align: start;
       letter-spacing: 0.5px;
