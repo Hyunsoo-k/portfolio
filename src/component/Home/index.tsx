@@ -12,8 +12,8 @@ const Home = (): JSX.Element => {
   return (
     <div className={styles["component-container"]}>
       <AboutMe />
-      <Portfolio />
       <Skills />
+      <Portfolio />
       <Contact />
       <Footer />
     </div>
