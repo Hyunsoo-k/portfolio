@@ -3,6 +3,7 @@ import { JSX } from "react";
 import AboutMe from "@/component/AboutMe";
 import Portfolio from "@/component/Portfolio";
 import Skills from "@/component/Skills";
+import MyExperiences from "@/component/MyExperiences";
 import Contact from "@/component/Contact";
 import Footer from "@/component/Footer";
 
@@ -14,6 +15,7 @@ const Home = (): JSX.Element => {
       <AboutMe />
       <Skills />
       <Portfolio />
+      <MyExperiences />
       <Contact />
       <Footer />
     </div>

@@ -1,0 +1,220 @@
+@use "@/style/variable" as *;
+
+.component-container {
+  position: relative;
+  background-color: $bright-purple-color;
+
+  .main {
+    width: 100%;
+    padding: 60px 0;
+    color: $white-font-color;
+
+    @include tablet {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 70px 20px;
+    }
+
+    @include desktop {
+      width: 85%;
+    }
+
+    .header {
+      padding: 0 15px;
+
+      @include tablet {
+        padding: 0;
+      }
+
+      .title {
+        text-align: center;
+        
+        h1 {
+          margin: 0;
+          letter-spacing: 2px;
+          font-size: 45px;
+          font-weight: 400;
+          font-family: "Slabo 27px", serif;
+
+          @include tablet {
+            font-size: 50px;
+          }
+        }
+
+        small {
+          display: inline-block;
+          margin-top: 20px;
+          font-size: 13px;
+
+          @include tablet {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .step-box {
+      overflow: hidden;
+      overflow-x: scroll;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 50px;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+  
+      @include tablet {
+        overflow-x: visible
+      }
+
+      .step-item-wrapper {
+        flex-shrink: 0;
+        display: flex;
+        width: calc(100vw - 30px);
+        
+        @include tablet {
+          flex-shrink: 1;
+          width: calc(100% / 3);
+        }
+
+        .step-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 50px;
+          width: 70%;
+          height: 100%;
+
+          .explan {
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid #D6223B;
+  
+            h2 {
+              margin-top: 0;
+              font-size: 20px;
+              font-weight: 700;
+
+              @include desktop {
+                font-size: 24px;
+              }
+            }
+
+            small {
+              font-weight: 300;
+
+              @include desktop {
+                font-weight: 400;
+              }
+            }
+  
+            .dot--border-top {
+              position: absolute;
+              left: -5px;
+              width: 8px;
+              height: 8px;
+              background-color: #D6223B;
+              border-radius: 50%;
+            }
+    
+            .dot--border-bottom {
+              position: absolute;
+              left: -5px;
+              bottom: 0;
+              width: 8px;
+              height: 8px;
+              background-color: #D6223B;
+              border-radius: 50%;
+            }
+          }
+  
+          .year {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+            height: 50px;
+            background-color: #D6223B;
+            letter-spacing: 2px;
+            font-size: 23px;
+            font-weight: 700;
+
+            @include tablet {
+              margin: 0;
+            }
+  
+            .year__triangle {
+              position: absolute;
+              top: 50%;
+              right: -20px;
+              transform: translateY(-50%);
+              width: 0;
+              height: 0;
+              background-color: #D6223B;
+              border-top: 25px solid $bright-purple-color;
+              border-bottom: 25px solid $bright-purple-color;
+              border-left: 20px solid #D6223B;
+            }
+          }
+        }
+      }
+
+      .step-item-wrapper:nth-of-type(1) {
+        justify-content: center;
+
+        @include tablet {
+          justify-content: start;
+        }
+      }
+
+      .step-item-wrapper:nth-of-type(2) {
+        justify-content: center;
+
+        @include tablet {
+          justify-content: center;
+        }
+      }
+
+      .step-item-wrapper:nth-of-type(3) {
+        justify-content: center;
+
+        @include tablet {
+          justify-content: end;
+        }
+      }
+
+      .time-line {
+        position: absolute;
+        bottom: 24px;
+        height: 2px;
+        background-color: #D6223B;
+        left: calc((100vw - 30px) * 0.15); // 첫 번째 .year의 시작점 (step-item의 70% 중간)
+        width: calc((100vw - 30px) * 0.7 * 2 + (100vw - 30px)); // 전체 너비 계산
+      
+        @include tablet {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  .polkaDots {
+    display: none;
+
+    @include desktop {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: -90px;
+      width: 90px;
+    }
+  }
+}
