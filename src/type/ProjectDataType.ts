@@ -1,3 +1,5 @@
+import { TechnologyStackBadgeKeyType } from "@/projectData/technologyStackBadge";
+
 interface ProjectDataType {
   projectName: string;
   position: "프론트엔드" | "서버";
@@ -10,7 +12,7 @@ interface ProjectDataType {
   };
   background: string;
   detail: string;
-  technologyStack: string[];
+  technologyStack: TechnologyStackBadgeKeyType[];
   image?: string[];
 };
 

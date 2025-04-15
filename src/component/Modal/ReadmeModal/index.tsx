@@ -5,7 +5,7 @@ import { FcDeployment } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa6";
 
 import { ProjectDataType } from "@/type/ProjectDataType";
-import { technologyStackBadgeMap, TechnologyStackBadgeType } from "@/projectData/technologyStackBadge";
+import { TechnologyStackBadgeKeyType, technologyStackBadgeMap, TechnologyStackBadgeType } from "@/projectData/technologyStackBadge";
 
 import styles from "./index.module.scss";
 
@@ -21,12 +21,11 @@ const ReadmeModal = ({ setReadmeModalOpen, projectData }: Props): JSX.Element =>
     personnel,
     introduce,
     feature,
-     link,
-     background,
-     detail,
-     technologyStack
-    } =
-    projectData;
+    link,
+    background,
+    detail,
+    technologyStack
+  } = projectData;
 
   const overLayRef = useRef<HTMLDivElement | null>(null);
   const contentRef = useRef<HTMLDivElement | null>(null);
@@ -111,7 +110,7 @@ const ReadmeModal = ({ setReadmeModalOpen, projectData }: Props): JSX.Element =>
             <div className={styles["article__technology-stack"]}>
               <h2>🛠️ Technology Stack</h2>
               <div className={styles["badge-box"]}>
-                {technologyStack.map((technologyStack: string, index: number) => (
+                {technologyStack.map((technologyStack: TechnologyStackBadgeKeyType, index: number) => (
                   <img
                     key={index}
                     src={technologyStackBadgeMap[technologyStack as keyof TechnologyStackBadgeType]}

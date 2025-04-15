@@ -1,3 +1,20 @@
+type TechnologyStackBadgeKeyType =
+  "html5" |
+  "css3" |
+  "javaScript" |
+  "typeScript" |
+  "nodeJs" |
+  "express" |
+  "react" |
+  "nextJs" |
+  "mongoose" |
+  "tanstackQuery" |
+  "sass" |
+  "tailwindCss" |
+  "mongoDb" |
+  "mySql" |
+  "fireBase";
+
 interface TechnologyStackBadgeType {
   html5: string;
   css3: string;
@@ -36,5 +53,5 @@ const technologyStackBadgeMap: TechnologyStackBadgeType = {
   fireBase: "https://img.shields.io/badge/Firebase-FFCA28?logo=Firebase&logoColor=white&style=flat"
 };
 
-export type { TechnologyStackBadgeType };
+export type { TechnologyStackBadgeKeyType, TechnologyStackBadgeType };
 export { technologyStackBadgeMap };
