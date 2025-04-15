@@ -97,8 +97,8 @@ const Header = (): JSX.Element => {
         {viewport !== "mobile" && (
           <div className={styles['menu-box']}>
             <a onClick={handleClickRoute}>About Me</a>
-            <a onClick={handleClickRoute}>Portfolio</a>
             <a onClick={handleClickRoute}>Skills</a>
+            <a onClick={handleClickRoute}>Portfolio</a>
             <a onClick={handleClickRoute}>Github</a>
             <a onClick={handleClickRoute}>Contact</a>
           </div>
@@ -113,8 +113,8 @@ const Header = (): JSX.Element => {
           }`}
         >
           <a onClick={handleClickRoute}>About Me</a>
-          <a onClick={handleClickRoute}>Portfolio</a>
           <a onClick={handleClickRoute}>Skills</a>
+          <a onClick={handleClickRoute}>Portfolio</a>
           <a onClick={handleClickRoute}>Github</a>
           <a onClick={handleClickRoute}>Contact</a>
         </div>
