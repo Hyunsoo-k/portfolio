@@ -5,7 +5,7 @@ import { FcDeployment } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa6";
 
 import { ProjectDataType } from "@/type/ProjectDataType";
-import { technologyStackBadgeMap } from "@/projectData/technologyStackBadge";
+import { technologyStackBadgeMap, TechnologyStackBadgeType } from "@/projectData/technologyStackBadge";
 
 import styles from "./index.module.scss";
 
@@ -112,7 +112,10 @@ const ReadmeModal = ({ setReadmeModalOpen, projectData }: Props): JSX.Element =>
               <h2>🛠️ Technology Stack</h2>
               <div className={styles["badge-box"]}>
                 {technologyStack.map((technologyStack: string, index: number) => (
-                  <img key={index} src={technologyStackBadgeMap[technologyStack]}></img>
+                  <img
+                    key={index}
+                    src={technologyStackBadgeMap[technologyStack as keyof TechnologyStackBadgeType]}
+                  />
                 ))}
               </div>
             </div>

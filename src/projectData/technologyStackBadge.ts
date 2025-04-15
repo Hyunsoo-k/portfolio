@@ -36,4 +36,5 @@ const technologyStackBadgeMap: TechnologyStackBadgeType = {
   fireBase: "https://img.shields.io/badge/Firebase-FFCA28?logo=Firebase&logoColor=white&style=flat"
 };
 
+export type { TechnologyStackBadgeType };
 export { technologyStackBadgeMap };
