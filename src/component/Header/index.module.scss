@@ -6,10 +6,7 @@
   z-index: 999;
   width: 100%;
   background-color: $dark-purple-color;
-
-  @include tablet {
-    position: static;
-  }
+  transition: box-shadow 0.3s ease;
 
   .main {
     position: relative;
@@ -138,4 +135,11 @@
     transform: translateY(-140px);
     left: 0;
   }
+}
+
+.component-container.located-top {
+}
+
+.component-container.located-no-top {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }

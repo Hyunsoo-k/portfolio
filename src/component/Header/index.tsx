@@ -12,6 +12,7 @@ const Header = (): JSX.Element => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const [locatedTop, setLocatedTop] = useState<boolean>(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
@@ -33,15 +34,39 @@ const Header = (): JSX.Element => {
   }, []);
 
   useEffect(() => {
-    const hash = window.location.hash;
-    
-    if (hash) {
-      const destinationComponent = document.querySelector(hash);
+    const handleScroll = () => {
+      if (window.pageYOffset === 0) {
+        setLocatedTop(true);
+      } else {
+        setLocatedTop(false);
+      };
+    };
 
+    window.addEventListener("scroll", handleScroll);
 
-      destinationComponent?.scrollIntoView({ behavior: "smooth" });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [])
+
+useEffect(() => {
+  const hash = window.location.hash;
+
+  if (hash) {
+    const destinationComponent = document.querySelector(hash);
+
+    if (destinationComponent) {
+      const rect = destinationComponent.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const offsetTop = rect.top + scrollTop - 100;
+
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
     }
-  }, [location]);
+  }
+}, [location]);
 
   const handleClickRoute = (e: MouseEvent<HTMLElement>): void => {
     e.stopPropagation();
@@ -52,8 +77,10 @@ const Header = (): JSX.Element => {
 
     const destinationRoute = target.innerHTML.replace(/\s/g, "");
 
+    console.log(destinationRoute)
+
     switch (destinationRoute) {
-      case "AbouteMe":
+      case "AboutMe":
         navigate("/#AboutMe");
         break;
       case "Portfolio":
@@ -78,7 +105,9 @@ const Header = (): JSX.Element => {
   };
 
   return(
-    <div className={styles['component-container']}>
+    <div className={
+      `${styles["component-container"]} ${locatedTop ? styles["located-top"] : styles["located-no-top"]}`
+    }>
       <div className={styles['main']}>
         <div className={styles['title-wrapper']}>
           <Link to='/'>Hyunsoo Kim</Link>
