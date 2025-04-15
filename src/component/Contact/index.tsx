@@ -14,10 +14,16 @@ const Contact = (): JSX.Element => {
     handleSubmit,
   } = useForm();
 
-  const onSubmit = (watch: Record<string, string>): void => {
-    console.log(watch);
-
-    setAlertModalOpen(true);
+  const onSubmit = async (watch: Record<string, string>): Promise<void> => {
+    await fetch("https://formspree.io/f/xzzewjav", {
+      method: "POST",
+      headers: {
+        "Content-Type": 'application/json'
+      },
+      body: JSON.stringify(watch)
+    })
+      .then((res: any) => { res.ok && setAlertModalOpen(true); })
+      .catch((error) => { console.error("에러:", error); });
   };
 
   return(
