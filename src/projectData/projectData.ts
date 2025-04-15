@@ -18,7 +18,7 @@ const personalProject: ProjectDataType[] = [
     },
     background: "음악을 전공했을 당시, 여러 뮤지션 커뮤니티가 있었지만, 재즈를 중심으로 활성화된 뮤지션 커뮤니티가 없었던 기억을 바탕으로 만든 웹 애플리케이션 입니다. 일방적인 뉴스, 매거진 등의 정보전달만이 아닌, 사용자들의 커뮤니케이션 참여가 가능한 서비스를 목표로 구상하고 구현하였습니다.",
     detail: "커뮤니티성 웹의 특성을 고려하려 사용자와의 인터렉션 UX를 최대한 고려하였습니다. CRUD 게시판은 페이지네이션이 아닌 커서 기반 무한스크롤로 구현하였고, 유저 정보, 유저 알림과 같이 데이터 수정 요청이 비교적 적은 데이터는 Tanstack-query의 queryKey 캐싱을 사용하고 변동이 있을 시 쿼리 무효화를 통한 즉각적인 데이터 패칭과 UI 변경이 이루어 지도록 하였습니다. 또한 게시글 작성, UI에 WYSIWYG(Quill)를 적용해 사용자 경험을 상승시키려고 노력하였습니다. 커뮤니티성 웹의 특색인 조회수, 추천, 댓글 기능도 구현하였습니다.",
-    technologyStack: ["nextJs", "typeScript", "tanstackQuery", "reactHookForm", "fireBase", "scss"],
+    technologyStack: ["nextJs", "typeScript", "tanstackQuery", "reactHookForm", "fireBase", "sass"],
     image: [
       "/projectImage/Bluenote/image1.png",
       "/projectImage/Bluenote/image2.png",

@@ -9,6 +9,7 @@ type TechnologyStackBadgeKeyType =
   "nextJs" |
   "mongoose" |
   "tanstackQuery" |
+  "reactHookForm" |
   "sass" |
   "tailwindCss" |
   "mongoDb" |
