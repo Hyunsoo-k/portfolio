@@ -1,0 +1,61 @@
+@use "@/style/variable" as *;
+
+.over-lay {
+  position: fixed;
+  z-index: 999;
+  overflow: hidden;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .component-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: 200px;
+    padding: 20px 0 10px;
+    background-color: $white-font-color;
+    border-radius: 8px;
+
+    @include tablet {
+      width: 300px;
+    }
+
+    .header {
+      height: 40px;
+      background-color: #2C2C2C;
+      border-radius: 5px 5px 0 0;
+    }
+
+    span {
+      padding-bottom: 15px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    button {
+      width: 100px;
+      height: 40px;
+      border: none;
+      background-color: #D6223B;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $white-font-color;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $bright-purple-color;
+      }
+    }
+  }
+}
