@@ -5,6 +5,14 @@ import AlertModal from "@/component/Modal/AlertModal";
 
 import styles from "./index.module.scss";
 
+interface ResetFormType {
+  name: string;
+  email: string;
+  phone: string;
+  budget: string;
+  message:string;
+};
+
 const Contact = (): JSX.Element => {
   const [alertModalOpen, setAlertModalOpen] = useState<boolean>(false);
 
@@ -13,15 +21,15 @@ const Contact = (): JSX.Element => {
     formState: { errors },
     handleSubmit,
     reset
-  } = useForm();
+  } = useForm<ResetFormType>();
 
-  const onSubmit = async (watch: Record<string, string>): Promise<void> => {
+  const onSubmit = async (data: ResetFormType): Promise<void> => {
     await fetch("https://formspree.io/f/xzzewjav", {
       method: "POST",
       headers: {
         "Content-Type": 'application/json'
       },
-      body: JSON.stringify(watch)
+      body: JSON.stringify(data)
     })
       .then((res: any) => { res.ok && setAlertModalOpen(true); })
       .catch((error) => { console.error("Error:", error); });
