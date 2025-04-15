@@ -12,6 +12,7 @@ const Contact = (): JSX.Element => {
     register,
     formState: { errors },
     handleSubmit,
+    reset
   } = useForm();
 
   const onSubmit = async (watch: Record<string, string>): Promise<void> => {
@@ -23,7 +24,7 @@ const Contact = (): JSX.Element => {
       body: JSON.stringify(watch)
     })
       .then((res: any) => { res.ok && setAlertModalOpen(true); })
-      .catch((error) => { console.error("에러:", error); });
+      .catch((error) => { console.error("Error:", error); });
   };
 
   return(
@@ -119,6 +120,7 @@ const Contact = (): JSX.Element => {
             </div> 
             <div className={styles["input-wrapper"]}>
               <input
+                {...register("budget")}
                 autoComplete="off" 
                 placeholder="예산"
               />
@@ -144,6 +146,7 @@ const Contact = (): JSX.Element => {
       {alertModalOpen && (
         <AlertModal
           setAlertModalOpen={setAlertModalOpen}
+          reset={reset}
         />
       )}
     </div>

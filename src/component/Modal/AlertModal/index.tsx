@@ -1,14 +1,24 @@
 import { Dispatch, JSX, MouseEvent, SetStateAction, useEffect } from "react";
+import { UseFormReset } from "react-hook-form";
 import { createPortal } from "react-dom";
 import { FiCheckCircle } from "react-icons/fi";
 
 import styles from "./index.module.scss";
 
-interface Props {
-  setAlertModalOpen: Dispatch<SetStateAction<boolean>>;
+interface ResetFormType {
+  name: string;
+  email: string;
+  phone: string;
+  budget: string;
+  message:string;
 };
 
-const AlertModal = ({ setAlertModalOpen }: Props): JSX.Element => {
+interface Props {
+  setAlertModalOpen: Dispatch<SetStateAction<boolean>>;
+  reset: UseFormReset<ResetFormType>;
+};
+
+const AlertModal = ({ setAlertModalOpen, reset }: Props): JSX.Element => {
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
@@ -19,6 +29,7 @@ const AlertModal = ({ setAlertModalOpen }: Props): JSX.Element => {
   const handleClickButton = (e: MouseEvent<HTMLButtonElement>): void => {
     e.stopPropagation();
 
+    reset();
     setAlertModalOpen(false);  
   };
 
