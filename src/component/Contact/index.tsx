@@ -1,22 +1,23 @@
-import { JSX } from "react";
+import { JSX, useState } from "react";
 import { useForm } from "react-hook-form";
+
+import AlertModal from "@/component/Modal/AlertModal";
 
 import styles from "./index.module.scss";
 
 const Contact = (): JSX.Element => {
+  const [alertModalOpen, setAlertModalOpen] = useState<boolean>(false);
+
   const {
     register,
     formState: { errors },
     handleSubmit,
-    watch,
   } = useForm();
 
   const onSubmit = (watch: Record<string, string>): void => {
     console.log(watch);
-  };
 
-  const onError = (erros: any): void => {
-    console.log(erros);
+    setAlertModalOpen(true);
   };
 
   return(
@@ -55,7 +56,7 @@ const Contact = (): JSX.Element => {
               <h1>Drop a Line</h1>
             </div>
           </div>
-          <form onSubmit={handleSubmit(onSubmit, onError)}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className={styles["input-wrapper"]}>
               <input
                 {...register("name", {
@@ -134,6 +135,11 @@ const Contact = (): JSX.Element => {
           </form>
         </div>
       </div>
+      {alertModalOpen && (
+        <AlertModal
+          setAlertModalOpen={setAlertModalOpen}
+        />
+      )}
     </div>
   );
 };
