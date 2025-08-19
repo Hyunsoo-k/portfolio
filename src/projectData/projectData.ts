@@ -20,8 +20,8 @@ const personalProject: ProjectDataType[] = [
     detail: "기존에 사용하던 quill 위지위그를 제치고 점유율 1위를 새롭게 갱신한 tiptap 위지위그 라이브러리를 사용해보고 싶어 계획한 프로젝트 입니다. 위지위그 내에서의 이미지 리사이징, contenteditable 조작 등 quill보다 높은 자유도를 가진 라이브러리였습니다.",
     technologyStack: ["react", "typeScript", "tanstackQuery", "reactHookForm", "tiptap", "supabase", "sass"],
     image: [
-      "/projectImage/NoteBookly/image1.png",
-      "/projectImage/NoteBookly/image2.png",
+      "/projectImage/noteBookly/image1.png",
+      "/projectImage/noteBookly/image2.png",
     ]
   },
     {
