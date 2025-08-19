@@ -36,6 +36,7 @@ const Skills = (): JSX.Element => {
               <img src={technologyStackBadgeMap["nextJs"]} />
               <img src={technologyStackBadgeMap["tanstackQuery"]} />
               <img src={technologyStackBadgeMap["reactHookForm"]} />
+              <img src={technologyStackBadgeMap["tiptap"]} />
               <img src={technologyStackBadgeMap["sass"]} />
               <img src={technologyStackBadgeMap["tailwindCss"]} />
             </div>
@@ -52,6 +53,7 @@ const Skills = (): JSX.Element => {
               <img src={technologyStackBadgeMap["mongoose"]} />
               <img src={technologyStackBadgeMap["mySql"]} />
               <img src={technologyStackBadgeMap["fireBase"]} />
+              <img src={technologyStackBadgeMap["supabase"]} />
             </div>
           </div>
         </div>
