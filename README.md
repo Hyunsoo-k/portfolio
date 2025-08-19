@@ -1,17 +1,27 @@
 ## potfolio
 기존의 포트폴리오를 대체하여 새로 만든 웹 애플리케이션
 
-## 개발인원
+## 개발 인원
 1인
 
 ## 기술 스택
--typescript
--react
--vite
--scss
+- typescript
+- react
+- vite
+- scss
 
 ## 배포
 Vercel
+
+## 설치
+```
+npm install
+```
+
+## 개발환경 실행
+```
+npm run dev
+```
 
 ## 폴더 구조
 
