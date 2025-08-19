@@ -24,7 +24,6 @@ npm run dev
 ```
 
 ## 폴더 구조
-
 ```
 root
 ├─ eslint.config.js
