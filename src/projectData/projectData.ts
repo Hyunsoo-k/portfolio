@@ -2,6 +2,48 @@ import { ProjectDataType } from "@/type/ProjectDataType";
 
 const personalProject: ProjectDataType[] = [
   {
+    projectName: "noteBookly",
+    position: "프론트엔드",
+    personnel: "1인 개발",
+    introduce: "카카오 브런치스토리를 참고하여 만든 에세이 웹 애플리케이션",
+    feature: [
+      "tiptap을 이용한 WYSIWYG 구현",
+      "contenteditable 요소와 react-hook-form의 결합",
+      "supabase를 이용한 이미지 스토리징",
+      "tanstak-query를 이용한 무한 스크롤 구현"
+    ],
+    link: {
+      deployment: "https://note-bookly.vercel.app/",
+      gitHub: "https://github.com/Hyunsoo-k/noteBookly"
+    },
+    background: "WYSIWYG를 자유자재로 다루기 위해 에세이성 웹 애플리케이션을 만들어 보기로 하였고, 평소에 자주 이용하던 카카오의 브런치스토리와 비슷하게 만들어 보고 싶어서 만든 웹 애플리케이션 입니다.",
+    detail: "기존에 사용하던 quill 위지위그를 제치고 점유율 1위를 새롭게 갱신한 tiptap 위지위그 라이브러리를 사용해보고 싶어 계획한 프로젝트 입니다. 위지위그 내에서의 이미지 리사이징, contenteditable 조작 등 quill보다 높은 자유도를 가진 라이브러리였습니다.",
+    technologyStack: ["react", "typeScript", "tanstackQuery", "reactHookForm", "tiptap", "supabase", "sass"],
+    image: [
+      "/projectImage/NoteBookly/image1.png",
+      "/projectImage/NoteBookly/image2.png",
+    ]
+  },
+    {
+    projectName: "noteBookly-server",
+    position: "서버",
+    personnel: "1인 개발",
+    introduce: "noteBookly 프로젝트의 RESTful-api 서버 프로젝트",
+    feature: [
+      "typescript를 사용한 express 프레임워크 프로젝트",
+      "mongoose의 문서 _id를 이용한 빠른 검색",
+      "여러 개의 문서를 반환하기 전 가상 dom을 이용한 WYSISYG 문자열 데이터 최적화",
+      "@vercel/node를 이용한 타입스크립트 컴파일"
+    ],
+    link: {
+      deployment: null,
+      gitHub: "https://github.com/Hyunsoo-k/noteBookly-server"
+    },
+    background: "에세이 웹 애플리케이션 noteBookly의 RESTful-api 서버입니다",
+    detail: "typescript를 사용한 express 프레임워크 프로젝트 입니다. Vercel의 serverless function으로 배포하였고, @vercel/node를 이용하여 타입스크립트 컴파일과같은 빌드처리를 하였습니다. vercel의 serverless function에 대해 자세히 알 수 있었던 프로젝트였습니다.",
+    technologyStack: ["nodeJs", "typeScript", "express", "mongoose", "mongoDb"],
+  },
+  {
     projectName: "Bluenote",
     position: "프론트엔드",
     personnel: "1인 개발",
@@ -10,7 +52,7 @@ const personalProject: ProjectDataType[] = [
       "Next.js의 SSR를 통한 데이터 프리패칭",
       "Tanstack-query를 이용한 CURD구현, 서버 데이터 관리",
       "React-hook-form을 이용한 input 값 검증",
-      "WySIG를 이용한 사용자 친화적 게시판 UI",
+      "WySIWYG를 이용한 사용자 친화적 게시판 UI",
     ],
     link: {
       deployment: "https://blue-note-silk.vercel.app/",
@@ -44,7 +86,7 @@ const personalProject: ProjectDataType[] = [
       gitHub: "https://github.com/Hyunsoo-k/bluenote-server",
     },
     background: "재즈 뮤지션 커뮤니티인 Bluenote의 서버 프로젝트입니다.",
-    detail: "NodeJs, Express를 이용한 앤드포인트 생성과 미들웨어를 구현하였습니다. DB는 MongoDb를 채택하였으며, Db통신에는 mongoose를 사용하였습니다. 문서의 생성, 변경, 조회는 문서의 고유한 _id 필드 값을 이용하여 효율적으로 접근하였고, 마이그레이션이 필요한 조회의 경우, aggregation 파이프라인을 이용해 복잡한 조회(Join, prject)를 순차적으로 진행되게 하였습니다. 유저 로그인 상태는 JWT 토큰과 쿠키로 관리하였습니다. 해당 프로젝트의 클라이언트의 게시글관련 라이브러리가 이미지를 BASE64 형식으로 출력하였는데, MongoDb의 문서 최적화를 위해 Firebase Storage에 이미지 저장 후, 해당 링크를 문자열로 문서에 저장하는 방식을 사용했습니다.",
+    detail: "NodeJs, Express를 이용한 앤드포인트 생성과 미들웨어를 구현하였습니다. DB는 MongoDb를 채택하였으며, DB통신에는 mongoose를 사용하였습니다. 문서의 생성, 변경, 조회는 문서의 고유한 _id 필드 값을 이용하여 효율적으로 접근하였고, 마이그레이션이 필요한 조회의 경우, aggregation 파이프라인을 이용해 복잡한 조회(Join, prject)를 순차적으로 진행되게 하였습니다. 유저 로그인 상태는 JWT 토큰과 쿠키로 관리하였습니다. 해당 프로젝트의 클라이언트의 게시글관련 라이브러리가 이미지를 BASE64 형식으로 출력하였는데, MongoDb의 문서 최적화를 위해 Firebase Storage에 이미지 저장 후, 해당 링크를 문자열로 문서에 저장하는 방식을 사용했습니다.",
     technologyStack: ["nodeJs", "express", "mongoDb", "mongoose"],
   },
   {

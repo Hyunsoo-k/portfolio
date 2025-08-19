@@ -14,7 +14,9 @@ type TechnologyStackBadgeKeyType =
   "tailwindCss" |
   "mongoDb" |
   "mySql" |
-  "fireBase";
+  "fireBase" |
+  "supabase"|
+  "tiptap";
 
 interface TechnologyStackBadgeType {
   html5: string;
@@ -33,6 +35,8 @@ interface TechnologyStackBadgeType {
   mongoDb: string;
   mySql: string;
   fireBase: string;
+  supabase: string;
+  tiptap: string;
 };
 
 const technologyStackBadgeMap: TechnologyStackBadgeType = {
@@ -51,7 +55,9 @@ const technologyStackBadgeMap: TechnologyStackBadgeType = {
   tailwindCss: "https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white",
   mongoDb: "https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white",
   mySql: "https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white",
-  fireBase: "https://img.shields.io/badge/Firebase-FFCA28?logo=Firebase&logoColor=white&style=flat"
+  fireBase: "https://img.shields.io/badge/Firebase-FFCA28?logo=Firebase&logoColor=white&style=flat",
+  supabase: "https://img.shields.io/badge/supabase-171717.svg?style=for-the-badge&logo=supabase&logoColor=green",
+  tiptap: "https://img.shields.io/badge/tiptap-2c2c2c.svg?style=for-the-badge&logo=tiptap&logoColor=white"
 };
 
 export type { TechnologyStackBadgeKeyType, TechnologyStackBadgeType };
