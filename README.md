@@ -10,8 +10,11 @@
 - vite
 - scss
 
-## 배포
+## 배포 플랫폼
 Vercel
+
+## 배포 URL
+https://portfolio-orpin-five-18.vercel.app/
 
 ## 설치
 ```
