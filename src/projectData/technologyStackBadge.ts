@@ -15,8 +15,9 @@ type TechnologyStackBadgeKeyType =
   "mongoDb" |
   "mySql" |
   "fireBase" |
-  "supabase"|
-  "tiptap";
+  "supabase" |
+  "tiptap" |
+  "cloudinary"
 
 interface TechnologyStackBadgeType {
   html5: string;
@@ -37,6 +38,7 @@ interface TechnologyStackBadgeType {
   fireBase: string;
   supabase: string;
   tiptap: string;
+  cloudinary: string;
 };
 
 const technologyStackBadgeMap: TechnologyStackBadgeType = {
@@ -57,7 +59,8 @@ const technologyStackBadgeMap: TechnologyStackBadgeType = {
   mySql: "https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white",
   fireBase: "https://img.shields.io/badge/Firebase-FFCA28?logo=Firebase&logoColor=white&style=flat",
   supabase: "https://img.shields.io/badge/supabase-171717.svg?style=for-the-badge&logo=supabase&logoColor=green",
-  tiptap: "https://img.shields.io/badge/tiptap-2c2c2c.svg?style=for-the-badge&logo=tiptap&logoColor=white"
+  tiptap: "https://img.shields.io/badge/tiptap-2c2c2c.svg?style=for-the-badge&logo=tiptap&logoColor=white",
+  cloudinary: "https://img.shields.io/badge/cloudinary-3448C5.svg?style=for-the-badge&logo=cloudinary&logoColor=white"
 };
 
 export type { TechnologyStackBadgeKeyType, TechnologyStackBadgeType };

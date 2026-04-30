@@ -2,6 +2,47 @@ import { ProjectDataType } from "@/type/ProjectDataType";
 
 const personalProject: ProjectDataType[] = [
   {
+    projectName: "BeanTalk",
+    position: "프론트엔드",
+    personnel: "1인 개발",
+    introduce: "커피 애호가들을 위한 웹 애플리케이션",
+    feature: [
+      "맵 api와 WYSIWYG를 결합한 사용자 친화적 UX",
+      "원활한 유지보수를 위한 Colocation 폴더구조",
+      "cloudinary를 이용한 이미지 스토리징",
+      "tanstack-query를 활용한 서버 데이터 캐싱"
+    ],
+    link: {
+      deployment: "https://bean-talk.vercel.app/",
+      gitHub: "https://github.com/Hyunsoo-k/bean-talk"
+    },
+    background: "일관된 서비스 디자인이 많은 커피 커뮤니티에 색다른 사용자 경험을 주기 위해 시작한 웹 애플리케이션 프로젝트 입니다.",
+    detail: "맵 api와 tiptap을 결합한 WYSIWYG, 보안을 위한 api 프록시, 기존의 게시글 기능과 현대적 스레드 게시글 기능의 조합 등, 다양한 서비스 디자인을 구현하였습니다.",
+    technologyStack: ["react", "typeScript", "tanstackQuery", "reactHookForm", "tiptap", "cloudinary", "sass"],
+    image: [
+      "/projectImage/BeanTalk/image1.png",
+      "/projectImage/BeanTalk/image2.png",
+      "/projectImage/BeanTalk/image3.png",
+    ]
+  },
+  {
+    projectName: "BeanTalk-server",
+    position: "서버",
+    personnel: "1인 개발",
+    introduce: "BeanTalk 프로젝트의 RESTful-api 서버 프로젝트",
+    feature: [
+      "api 프록시 적용",
+      "@vercel/node를 이용한 타입스크립트 컴파일"
+    ],
+    link: {
+      deployment: null,
+      gitHub: "https://github.com/Hyunsoo-k/bean-talk-server"
+    },
+    background: "커피 커뮤니티 웹 애플리케이션 BeanTalk의 RESTful-api 서버입니다",
+    detail: "맵 api를 사용하기위해 api 프록시 적용, 미들웨어와 컨트롤러의 책임을 명확히 하여 유지보수를 원활히 할 수 있도록 설계, 구현하였습니다.",
+    technologyStack: ["nodeJs", "typeScript", "express", "mongoose", "mongoDb"],
+  },
+  {
     projectName: "noteBookly",
     position: "프론트엔드",
     personnel: "1인 개발",
@@ -24,7 +65,7 @@ const personalProject: ProjectDataType[] = [
       "/projectImage/noteBookly/image2.png",
     ]
   },
-    {
+  {
     projectName: "noteBookly-server",
     position: "서버",
     personnel: "1인 개발",
